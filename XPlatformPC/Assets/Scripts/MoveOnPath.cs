@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class handles the 'Chaser' object's movement in the game:

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class is responsible for handling the manual creation of waypoint paths for a Chaser object to follow, from spawn to destruction.

@@ -1,6 +1,6 @@
 ﻿using Photon.Pun;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class is responsible for syncing the showing / hiding of players' tools over the network.

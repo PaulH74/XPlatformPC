@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Photon.Pun;
 
-namespace KanePC
+namespace XPlatformPC
 {
     public class FPCamera : MonoBehaviourPun
     {

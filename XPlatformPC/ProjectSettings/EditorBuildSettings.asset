@@ -8,13 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Launcher.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/DML_Lobby_Large.unity
-    guid: 9862e53b1db41a345a27176b8881ef10
-  - enabled: 0
-    path: Assets/Scenes/DML_Lobby_02.unity
-    guid: ce878c45a058d964aab9d5ed070f41c3
   - enabled: 1
-    path: Assets/Scenes/Construction_Scene.unity
-    guid: 7d6ba1915fd465d4fae80cc9f1d0ddb6
+    path: Assets/Scenes/MP_Scene.unity
+    guid: 2a0eea94bd1538b4685e50a6f92b62d9
   m_configObjects: {}

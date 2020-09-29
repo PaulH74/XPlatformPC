@@ -4,7 +4,7 @@ using Photon.Pun;
 using Photon.Voice.Unity;
 using Photon.Voice.PUN;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class managers the local player's instance over the PUN network and local player's inputs, sending the Transform data of the local player's VR hardware to other

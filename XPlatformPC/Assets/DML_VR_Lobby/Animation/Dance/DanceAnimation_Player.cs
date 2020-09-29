@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace KanePC
+namespace XPlatformPC
 {
     public class DanceAnimation_Player : MonoBehaviour
     {

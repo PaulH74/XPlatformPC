@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Photon.Pun;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class is responsible for controlling the Laser Pointer tool, generating the "laser-beam" and hit point objects, as well

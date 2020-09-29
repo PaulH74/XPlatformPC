@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class selects a random path from the path array 

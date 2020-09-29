@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class is responsible for allowing the user to select and spawn / destroy an interactive VR tool in the scene.

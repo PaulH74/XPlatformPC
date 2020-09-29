@@ -1,4 +1,4 @@
-﻿namespace KanePC
+﻿namespace XPlatformPC
 {
     /// <summary>
     /// Public enum used to maintain a centralised, common population of selectable tools.

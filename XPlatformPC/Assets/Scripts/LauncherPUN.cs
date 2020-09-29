@@ -3,7 +3,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 
-namespace KanePC
+namespace XPlatformPC
 {
     /// <summary>
     /// This class is responsible for creating a room on Photon Network (if master client: first player to connect) or else joining the room
@@ -13,7 +13,7 @@ namespace KanePC
     {
         #region Private and Public Attributes
         // Public Attributes
-        public const string ROOM_NAME = "Construction_Scene";
+        public const string ROOM_NAME = "MP_Scene";
         public GameObject loadingUI;
         public GameObject connectingUI;
         public Slider loadingSlider;
