@@ -3,29 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - controllerLeft
-  - controllerRight
-  - Teleport Button
-  - Tool Button
-  - Keyboard Button
-  - Colour Swatch
-  - Teleport
-  - VR Head Trigger
-  - UI Application Button
-  - Whiteboard_Colour
-  - Whiteboard
-  - Whiteboard_Erase
-  - Minimap Camera
-  - Player Icon
-  - Floor
-  - Chair
-  - File Presenter
-  - Whiteboard Marker
-  - UI Control Panel
-  - Networked Tool
-  - Teleprompter Button
-  - Roof
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -35,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - Whiteboard_Interaction
-  - Minimap_Cam_Exclude
-  - Minimap_Cam_Only
-  - Laser_Interactable
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
