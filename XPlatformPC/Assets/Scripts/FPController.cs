@@ -3,7 +3,7 @@ using Photon.Pun;
 
 public class FPController : MonoBehaviourPun
 {
-    public float speed = 10.0f;
+    public float speed = 5.0f;
     private float translation;
     private float straffe;
 
@@ -41,7 +41,7 @@ public class FPController : MonoBehaviourPun
             {
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
             }
-            else if (Input.GetKeyDown(KeyCode.Escape))
+            else if (Input.GetKeyDown(KeyCode.X))
             {
                 Application.Quit();
             }
