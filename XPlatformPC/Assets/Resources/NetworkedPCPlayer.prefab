@@ -104,8 +104,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1874634501231031012}
   - component: {fileID: 1874634501231031019}
-  - component: {fileID: 1874634501231031018}
   - component: {fileID: 1874634501231031017}
+  - component: {fileID: 1874634501231031018}
   - component: {fileID: 1874634501231031013}
   - component: {fileID: 7952980250048345063}
   - component: {fileID: 3935087991155338414}
@@ -148,22 +148,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1874634501231031018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874634501231031016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d45e4f617539e64889b89df99d18f9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  headAvatar: {fileID: 1874634501219279404}
-  smoothingFactor: 0
-  appliedDistance: 0
-  CameraRig: {fileID: 1874634502037332930}
 --- !u!114 &1874634501231031017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +171,22 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &1874634501231031018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874634501231031016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d45e4f617539e64889b89df99d18f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headAvatar: {fileID: 1874634501219279404}
+  smoothingFactor: 0
+  appliedDistance: 0
+  CameraRig: {fileID: 1874634502037332930}
 --- !u!114 &1874634501231031013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   speakerInUse: {fileID: 8594725099623352896}
   AutoCreateRecorderIfNotFound: 0
   UsePrimaryRecorder: 0
-  SetupDebugSpeaker: 1
+  SetupDebugSpeaker: 0
 --- !u!114 &3935087991155338414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,10 +236,10 @@ MonoBehaviour:
   voiceDetection: 1
   voiceDetectionThreshold: 0.01
   voiceDetectionDelayMs: 500
-  unityMicrophoneDevice: Microphone (Logitech USB Headset H540)
-  photonMicrophoneDeviceId: 0
+  unityMicrophoneDevice: 
+  photonMicrophoneDeviceId: -1
   interestGroup: 0
-  debugEchoMode: 1
+  debugEchoMode: 0
   reliableMode: 0
   encrypt: 0
   transmitEnabled: 1
