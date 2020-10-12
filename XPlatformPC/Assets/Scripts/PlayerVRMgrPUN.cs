@@ -20,19 +20,19 @@ namespace XPlatformPC
         public GameObject rightHandAvatar;
 
         // Hand Gestures
-        //[Header("Avatar Hand Poses:")]
-        //public SkinnedMeshRenderer poseNormalLH;
-        //public SkinnedMeshRenderer poseThumbUpLH;
-        //public SkinnedMeshRenderer poseFingerPointLH;
-        //public SkinnedMeshRenderer poseNormalRH;
-        //public SkinnedMeshRenderer poseThumbUpRH;
-        //public SkinnedMeshRenderer poseFingerPointRH;
-        //private bool _ShowNormalHandPose_LH;
-        //private bool _ShowThumbUpHandPose_LH;
-        //private bool _ShowFingerPointHandPose_LH;
-        //private bool _ShowNormalHandPose_RH;
-        //private bool _ShowThumbUpHandPose_RH;
-        //private bool _ShowFingerPointHandPose_RH;
+        [Header("Avatar Hand Poses:")]
+        public SkinnedMeshRenderer poseNormalLH;
+        public SkinnedMeshRenderer poseThumbUpLH;
+        public SkinnedMeshRenderer poseFingerPointLH;
+        public SkinnedMeshRenderer poseNormalRH;
+        public SkinnedMeshRenderer poseThumbUpRH;
+        public SkinnedMeshRenderer poseFingerPointRH;
+        private bool _ShowNormalHandPose_LH;
+        private bool _ShowThumbUpHandPose_LH;
+        private bool _ShowFingerPointHandPose_LH;
+        private bool _ShowNormalHandPose_RH;
+        private bool _ShowThumbUpHandPose_RH;
+        private bool _ShowFingerPointHandPose_RH;
 
         // Smoothing Variables For Remote Player's Motion
         [Header("Player Avatar Motion Smoothing:")]
@@ -60,14 +60,9 @@ namespace XPlatformPC
                 leftHandAvatar.SetActive(false);
                 rightHandAvatar.SetActive(false);
 
-                // Voice Transmission (default state is ON, ALL players remote)
-                //_CurrentAvailableLocalGroupNumber = 2;          // First available group number after remote group (1)
-                //_LocalGrouplist = new List<byte>();             // to contain byte values > 1 per local group (up to 255 limit)
-                //_RecorderPUN = GetComponent<Recorder>();
-
                 // Hand Gestures (default state)
-                //SetLeftHandPose(true, false, false);
-                //SetRightHandPose(true, false, false);
+                SetLeftHandPose(true, false, false);
+                SetRightHandPose(true, false, false);
             }
 
             // Critical
@@ -88,14 +83,14 @@ namespace XPlatformPC
             else
             {
                 // Show networked player's current hand pose
-                //// Left Hand
-                //poseNormalLH.enabled = _ShowNormalHandPose_LH;
-                //poseThumbUpLH.enabled = _ShowThumbUpHandPose_LH;
-                //poseFingerPointLH.enabled = _ShowFingerPointHandPose_LH;
-                //// Right Hand
-                //poseNormalRH.enabled = _ShowNormalHandPose_RH;
-                //poseThumbUpRH.enabled = _ShowThumbUpHandPose_RH;
-                //poseFingerPointRH.enabled = _ShowFingerPointHandPose_RH;
+                // Left Hand
+                poseNormalLH.enabled = _ShowNormalHandPose_LH;
+                poseThumbUpLH.enabled = _ShowThumbUpHandPose_LH;
+                poseFingerPointLH.enabled = _ShowFingerPointHandPose_LH;
+                // Right Hand
+                poseNormalRH.enabled = _ShowNormalHandPose_RH;
+                poseThumbUpRH.enabled = _ShowThumbUpHandPose_RH;
+                poseFingerPointRH.enabled = _ShowFingerPointHandPose_RH;
 
                 // Smooth Remote player's motion on local machine
                 SmoothPlayerMotion(ref headAvatar, ref correctPlayerHeadPosition, ref correctPlayerHeadRotation);
@@ -110,12 +105,12 @@ namespace XPlatformPC
         /// <param name="normal"></param>
         /// <param name="thumbsUp"></param>
         /// <param name="fingerPoint"></param>
-        //private void SetLeftHandPose(bool normal, bool thumbsUp, bool fingerPoint)
-        //{
-        //    _ShowNormalHandPose_LH = normal;
-        //    _ShowThumbUpHandPose_LH = thumbsUp;
-        //    _ShowFingerPointHandPose_LH = fingerPoint;
-        //}
+        private void SetLeftHandPose(bool normal, bool thumbsUp, bool fingerPoint)
+        {
+            _ShowNormalHandPose_LH = normal;
+            _ShowThumbUpHandPose_LH = thumbsUp;
+            _ShowFingerPointHandPose_LH = fingerPoint;
+        }
 
         /// <summary>
         /// Updates player's right hand avatar pose according to boolean inputs.
@@ -123,12 +118,12 @@ namespace XPlatformPC
         /// <param name="normal"></param>
         /// <param name="thumbsUp"></param>
         /// <param name="fingerPoint"></param>
-        //private void SetRightHandPose(bool normal, bool thumbsUp, bool fingerPoint)
-        //{
-        //    _ShowNormalHandPose_RH = normal;
-        //    _ShowThumbUpHandPose_RH = thumbsUp;
-        //    _ShowFingerPointHandPose_RH = fingerPoint;
-        //}
+        private void SetRightHandPose(bool normal, bool thumbsUp, bool fingerPoint)
+        {
+            _ShowNormalHandPose_RH = normal;
+            _ShowThumbUpHandPose_RH = thumbsUp;
+            _ShowFingerPointHandPose_RH = fingerPoint;
+        }
 
         /// <summary>
         /// Applies LERP interpolation to smooth the remote player's game object motion over the network. 
@@ -173,12 +168,12 @@ namespace XPlatformPC
                 leftHandAvatar.transform.rotation = (Quaternion)stream.ReceiveNext();
                 rightHandAvatar.transform.position = (Vector3)stream.ReceiveNext();
                 rightHandAvatar.transform.rotation = (Quaternion)stream.ReceiveNext();
-                //_ShowNormalHandPose_LH = (bool)stream.ReceiveNext();
-                //_ShowThumbUpHandPose_LH = (bool)stream.ReceiveNext();
-                //_ShowFingerPointHandPose_LH = (bool)stream.ReceiveNext();
-                //_ShowNormalHandPose_RH = (bool)stream.ReceiveNext();
-                //_ShowThumbUpHandPose_RH = (bool)stream.ReceiveNext();
-                //_ShowFingerPointHandPose_RH = (bool)stream.ReceiveNext();
+                _ShowNormalHandPose_LH = (bool)stream.ReceiveNext();
+                _ShowThumbUpHandPose_LH = (bool)stream.ReceiveNext();
+                _ShowFingerPointHandPose_LH = (bool)stream.ReceiveNext();
+                _ShowNormalHandPose_RH = (bool)stream.ReceiveNext();
+                _ShowThumbUpHandPose_RH = (bool)stream.ReceiveNext();
+                _ShowFingerPointHandPose_RH = (bool)stream.ReceiveNext();
             }
         }
         #endregion
