@@ -16,6 +16,8 @@ namespace XPlatformPC
         // VR Avatar Elements
         [Header("Player Avatar (Displayed to other networked players):")]
         public GameObject headAvatar;
+        public GameObject mouthAnimated;
+        public GameObject mouthStatic;
         //public GameObject leftHandAvatar;
         //public GameObject rightHandAvatar;
         private Transform localVRHeadset;
@@ -121,6 +123,16 @@ namespace XPlatformPC
         //}
 
         /// <summary>
+        /// Toggles Animated / Static mouth on the player avatar when they are speaking / not speaking
+        /// </summary>
+        /// <param name="animateMouth"></param>
+        private void ToggleMouthState(bool animateMouth)
+        {
+            mouthAnimated.SetActive(animateMouth);
+            mouthStatic.SetActive(!animateMouth);
+        }
+
+        /// <summary>
         /// Applies LERP interpolation to smooth the remote player's game object motion over the network. 
         /// </summary>
         /// <param name="gameObject"></param>
@@ -167,6 +179,7 @@ namespace XPlatformPC
                 //_ShowNormalHandPose_RH = (bool)stream.ReceiveNext();
                 //_ShowThumbUpHandPose_RH = (bool)stream.ReceiveNext();
                 //_ShowFingerPointHandPose_RH = (bool)stream.ReceiveNext();
+                ToggleMouthState((bool)stream.ReceiveNext());
             }
         }
         #endregion
